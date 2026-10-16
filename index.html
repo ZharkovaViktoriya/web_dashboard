@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efdf">
+  <title>Антистресс-центр</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./js/main.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="Антистресс-центр — главная">
+        <span class="brand-icon" aria-hidden="true">✿</span>
+        <span class="brand-name">ANTI<br>STRESS<br>CLUB</span>
+      </a>
+      <div class="sidebar-label">ДОБАВИТЬ ВИДЖЕТ</div>
+      <nav class="add-menu" aria-label="Добавить виджет">
+        <button class="add-widget" data-widget="todo"><span>✓</span> Список дел</button>
+        <button class="add-widget" data-widget="sudoku"><span>▦</span> Судоку</button>
+        <button class="add-widget" data-widget="weather"><span>☼</span> Погода</button>
+        <button class="add-widget" data-widget="coloring"><span>▧</span> Раскраска</button>
+        <button class="add-widget" data-widget="clicker"><span>♡</span> Антистресс</button>
+        <button class="add-widget" data-widget="sounds"><span>♫</span> Звуки</button>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <h1>Антистресс-центр<span class="title-star">✦</span></h1>
+        </div>
+        <div class="topbar-actions">
+          <div class="date-chip"><span id="today-label">сегодня</span></div>
+          <button class="icon-button" id="reset-layout" title="Вернуть демонстрационные карточки" aria-label="Сбросить карточки">↻</button>
+        </div>
+      </header>
+
+      <section class="welcome-banner">
+        <div class="welcome-copy">
+          <h2>Не нужно быть<br>продуктивной каждую минуту.</h2>
+          <button class="primary-button" id="random-widget">Выбрать за меня <span>→</span></button>
+        </div>
+        <div class="banner-art" aria-hidden="true">
+          <div class="sun"></div><div class="cloud cloud-one"></div><div class="cloud cloud-two"></div>
+          <div class="hill hill-back"></div><div class="hill hill-front"></div>
+          <div class="tiny-house"><div class="roof"></div><div class="house-body"><div class="window"></div><div class="door"></div></div></div>
+          <span class="art-star star-one">✦</span><span class="art-star star-two">✧</span>
+        </div>
+      </section>
+
+      <div class="section-heading">
+        <div><p class="eyebrow">ТВОИ ИНСТРУМЕНТЫ</p><h2>Место для отдыха <span class="count-pill" id="widget-count">5</span></h2></div>
+      </div>
+      <section class="widget-grid" id="widget-grid" aria-live="polite"></section>
+      <footer class="footer-note"><span>✿</span> Сделай паузу. Попей воды. Будь к себе добрее.</footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
